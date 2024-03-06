@@ -36,17 +36,7 @@ export function NavBar({ user, items, children, rightElements, scroll = false }:
           <div className="flex items-center space-x-3">
             {rightElements}
 
-            {!user ? (
-              <Link
-                href="/login"
-                className={cn(
-                  buttonVariants({ variant: "outline", size: "sm" })
-                )}
-              >
-                Login Page
-              </Link>
-            ) : null}
-
+            
             {user ? (
               <UserAccountNav user={user} />
             ) : (
